@@ -1,0 +1,21 @@
+ # primero voy a crear un archivo, y escribir mis notas
+# abro un archivo llamado my_notes.txt en modo escritura ("w")
+
+with open("my_notes.txt", "w") as file:
+    file.write("1ra nota: Hoy ha sido un dia cansado.\n")
+    file.write("2da nota: Quisiera ser buena programando, siento que me quedo atrás.\n")
+    file.write("3ra nota: En mis sueños mas profundos vi esa ciudad, silent hill.\n")
+    file.write("4ta nota: Extraño hablar contigo, pero la vida no fue justa con nosotros.\n")
+
+# abro el archivo en modo lectura ("r") para poder leer lo que he escrito
+file = open("my_notes.txt", "r")
+
+# se lee la primera línea
+line = file.readline()
+# si hay una línea para leer, la imprimo en pantalla
+while line:
+    print(line.strip())
+    line = file.readline()
+
+# finalmente queda listo 
+file.close()
